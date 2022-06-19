@@ -1,0 +1,292 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --bg-color: hsl(220, 18%, 78%);
+  --bg-color-light: hsl(220, 18%, 86%);
+  --title-color: hsl(220, 8%, 10%);
+  --text-color: hsl(220, 4%, 32%);
+  --text-color-light: hsl(220, 4%, 55%);
+  --body-color: hsl(220, 18%, 99%);
+  --container-color: hsl(220, 18%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Lora', serif;
+
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 1124px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .4s; /*For animation dark mode*/
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*========== 
+    Color changes in some parts of 
+    the website, in dark theme 
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+@media screen and (max-width:1023px){
+  .nav__menu{
+    position: fixed;
+    bottom: 1.5rem;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 12px hsla(220, 18%, 40%, .15);
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1.25rem 2.8rem;
+    border-radius: .5rem;
+  }
+  .nav__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__link{
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+    display: grid;
+    justify-items: center;
+    row-gap: .25rem;
+  }
+  .nav__link i{
+    font-size: 1.25rem;
+  }
+  .nav__link span{
+    font-size: .688rem;
+  }
+  
+}
+
+/* Change background header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home{
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.home__container{
+  padding: 4rem 0 1rem;
+  row-gap: 8.5rem;
+
+}
+
+.home__title{
+  font-size: var(--biggest-font-size);
+  font-weight: 400;
+}
+.home__description{
+  color: var(--title-color);
+  margin: 1rem 0 2rem;
+}
+
+.home__title,
+.home__description{
+  line-height: 140%;
+}
+
+.home__images{
+  position: relative;
+  width: 310px;
+  justify-self: center;
+}
+.home__images img:nth-child(1){
+   width: 224px;
+   position: absolute;
+   right: -1.5rem;
+   top:-9.5rem;
+}
+.home__images img:nth-child(2){
+  width: 180px;
+  margin-left: .5rem;
+  position: relative;
+}
+
+/*=============== BUTTON ===============*/
+.button__link{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+.button__link i{
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.button__link:hover i{
+  transform: translateX(.25rem);
+}
+
+/*=============== NEW ===============*/
+
+
+/*=============== COLLECTION ===============*/
+
+
+/*=============== PRODUCTS ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== BRANDS ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+
+
+/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
+
