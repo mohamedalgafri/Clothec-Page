@@ -1,5 +1,4 @@
-# 👕 Responsive Clothing Landing Page
-## [Watch it on youtube](https://youtu.be/UgE8hcbRVBU)
+
 ### 👕 Responsive Clothing Landing Page 
 
 - Responsive Clothing Landing Page Using HTML CSS & JavaScript
@@ -10,3 +9,4 @@
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 
+![preview img](/preview.png)
